@@ -2,9 +2,10 @@
 
 set database=payroll
 set dropAndCreate="DROP DATABASE IF EXISTS %database%; CREATE DATABASE %database%;"
+set backupFile=dev.backup.after.sql
 
 echo %dropAndCreate%
 mysql -u rdt -e %dropAndCreate%
 
-echo Restoring %database%
-mysql -u rdt %database% < dev.backup.sql
+echo Restoring %database% from %backupFile%
+mysql -u rdt %database% < %backupFile%
