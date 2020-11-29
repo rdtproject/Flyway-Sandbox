@@ -22,6 +22,10 @@ flyway -configFiles=conf\payrollCompare.conf target=5 migrate
 ```sql
 mysqldump -u dev sakila --routines -no-data --skip-add-drop-table --skip-quote-names > sql\V001__baseline.sql
 ```
+- To mark current version of DB in Flyway (when it is not possible to create DB from scratch)
+```sql
+flyway -baselineVersion=2 baseline
+```
 
 # Flyway articles, documentation
 - https://flywaydb.org/documentation/concepts/migrations#sql-based-migrations
