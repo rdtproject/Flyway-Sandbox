@@ -16,6 +16,9 @@ flyway -configFiles=conf\payrollCompare.conf clean
 flyway -configFiles=conf\payrollCompare.conf target=5 migrate
 ```
 
+#Flyway articles, documentation
+- https://flywaydb.org/documentation/concepts/migrations#sql-based-migrations
+
 # DB reverse engineering - DB Schema compare tools
 ## MySQL
 - Toad for MySql
