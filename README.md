@@ -2,6 +2,7 @@
 - flywayway info
 - flyway migrate
 - flyway repair
+- flyway validate, to check if any of the existing migration scripts was updated
 - flyway custom config file, e.g. to execute scripts in compare DB
 ```sql
 flyway -configFiles=conf\payrollCompare.conf info
