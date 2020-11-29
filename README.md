@@ -17,6 +17,12 @@ flyway -configFiles=conf\payrollCompare.conf clean
 flyway -configFiles=conf\payrollCompare.conf target=5 migrate
 ```
 
+# Creating an SQL of current Prod DB
+- Use mysqldump and set up to get the Schema, not data
+```sql
+mysqldump -u dev sakila --routines -no-data --skip-add-drop-table --skip-quote-names > sql\V001__baseline.sql
+```
+
 #Flyway articles, documentation
 - https://flywaydb.org/documentation/concepts/migrations#sql-based-migrations
 
